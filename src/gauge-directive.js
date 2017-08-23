@@ -10,7 +10,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Number} min The minimum value used in the Gauge.
  *   
@@ -77,7 +77,7 @@ function ChartGauge() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {
             'labelFormatFunction': "&"

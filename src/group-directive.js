@@ -13,7 +13,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} groupValues Comma separated column ids.
  *   
@@ -27,7 +27,7 @@ angular.module('c3js.angular.chart')
  * Example:
  *  
  * 
- * <c3chart bindto-id="stacked-bar-plot1-chart">
+ * <c3jschart bindto-id="stacked-bar-plot1-chart">
  *   <chart-column column-id="data 1"
  *             column-name="Data 1"
  *             column-color="red"
@@ -39,7 +39,7 @@ angular.module('c3js.angular.chart')
  *             column-values="50,20,10,40,15,25"
  *             column-type="bar"/>
  *   <chart-group group-values="data 1,data 2"/>
- * </c3chart>  
+ * </c3jschart>  
  */
 function ChartGroup() {
     var groupLinker = function(scope, element, attrs, chartCtrl) {
@@ -48,7 +48,7 @@ function ChartGroup() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,

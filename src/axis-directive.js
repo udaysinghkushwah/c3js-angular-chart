@@ -11,7 +11,7 @@ angular.module('c3js.angular.chart')
  *   Element
  * 
  * Parent element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} axisRotate Configure to rotate the axis, javascript true means we rotate the axis.
  *   
@@ -33,7 +33,7 @@ function ChartAxis() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "transclude": true,

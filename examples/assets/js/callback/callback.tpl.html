@@ -9,7 +9,7 @@
             <em>on-resize</em>, <em>on-resized</em>, <em>on-rendered</em>, <em>on-click-data</em>,
             <em>on-mouseover-data</em> and <em>on-mouseout-data</em>.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="interactive-plot1-chart" show-labels="false">
+&lt;c3jschart bindto-id="interactive-plot1-chart" show-labels="false">
     &lt;chart-column column-id="data1"
                   column-name="Data 1"
                   column-values="70"
@@ -22,7 +22,7 @@
                   column-type="donut"/>
     &lt;chart-donut title="Donut" width="60"/>
     &lt;chart-events on-click-data="vm.showClick(data)"/>
-&lt;/c3chart>
+&lt;/c3jschart>
 </pre>
 <pre class="brush: js; html-script: false">
 function CallbackCtrl() {
@@ -39,7 +39,7 @@ function CallbackCtrl() {
 
         <div layout="row">
             <div flex="50">
-                <c3chart bindto-id="interactive-plot1-chart" show-labels="false">
+                <c3jschart bindto-id="interactive-plot1-chart" show-labels="false">
                     <chart-column column-id="data1"
                                   column-name="Data 1"
                                   column-values="70"
@@ -52,7 +52,7 @@ function CallbackCtrl() {
                                   column-type="donut"/>
                     <chart-donut title="Donut" width="60"/>
                     <chart-events on-click-data="vm.showClick(data)"/>
-                </c3chart>
+                </c3jschart>
             </div>
             <div flex="50">
                 <p>Data clicked: <strong>Name</strong> {{vm.clicked.name}}, <strong>Value</strong> {{vm.clicked.value}}
@@ -65,7 +65,7 @@ function CallbackCtrl() {
             api. It also shows loading the data from the controller instead of using the <code>chart-column</code>
             directive.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="dynamicpie" chart-data="vm.piePoints" chart-columns="vm.pieColumns"
+&lt;c3jschart bindto-id="dynamicpie" chart-data="vm.piePoints" chart-columns="vm.pieColumns"
          callback-function="vm.handleCallback"/>
 &lt;md-button class="md-raised" ng-click="vm.toggleLegend()">Toggle legend&lt;/md-button>
 </pre>
@@ -97,7 +97,7 @@ function CallbackCtrl() {
 </pre>
         <div layout="row">
             <div flex="50">
-                <c3chart bindto-id="dynamicpie" chart-data="vm.piePoints" chart-columns="vm.pieColumns"
+                <c3jschart bindto-id="dynamicpie" chart-data="vm.piePoints" chart-columns="vm.pieColumns"
                          callback-function="vm.handleCallback"/>
             </div>
             <div flex="50">
@@ -111,11 +111,11 @@ function CallbackCtrl() {
                     second pie will be obtained. In the sample the data points are hard coded but of course they can
                     come from somewhere else.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="interactivepie1" chart-data="vm.piePoints" chart-columns="vm.pieColumns">
+&lt;c3jschart bindto-id="interactivepie1" chart-data="vm.piePoints" chart-columns="vm.pieColumns">
     &lt;chart-events on-click-data="vm.selectItem(data)"/>
-&lt;/c3chart>
-&lt;c3chart bindto-id="interactivepie2" chart-data="vm.piePointsSelected" chart-columns="vm.pieColumnsSelected">
-&lt;/c3chart>
+&lt;/c3jschart>
+&lt;c3jschart bindto-id="interactivepie2" chart-data="vm.piePointsSelected" chart-columns="vm.pieColumnsSelected">
+&lt;/c3jschart>
 </pre>
 
 <pre class="brush: js; html-script: false">
@@ -142,13 +142,13 @@ function selectItem(data) {
 </pre>
             </div>
             <div flex="50">
-                <c3chart bindto-id="interactivepie1" chart-data="vm.piePoints" chart-columns="vm.pieColumns">
+                <c3jschart bindto-id="interactivepie1" chart-data="vm.piePoints" chart-columns="vm.pieColumns">
                     <chart-events on-click-data="vm.selectItem(data)"/>
-                </c3chart>
+                </c3jschart>
                 <div ng-show="vm.selected">
-                    <c3chart bindto-id="interactivepie2" chart-data="vm.piePointsSelected"
+                    <c3jschart bindto-id="interactivepie2" chart-data="vm.piePointsSelected"
                              chart-columns="vm.pieColumnsSelected">
-                    </c3chart>
+                    </c3jschart>
                 </div>
                 <div ng-hide="vm.selected">
                     <p>Click on the pie diagram above to select values belonging to that part of the pie.</p>
@@ -162,10 +162,10 @@ function selectItem(data) {
                 <p>Below the code, first the pie with dynamic columns and next the code for the event callback
                     function.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="interactivelegend" chart-data="vm.piePointsLabel" chart-columns="vm.pieColumnsLabel">
+&lt;c3jschart bindto-id="interactivelegend" chart-data="vm.piePointsLabel" chart-columns="vm.pieColumnsLabel">
     &lt;chart-legend on-click="vm.clickLegend(data)" legend-inset="top-right"
     legend-inset-x="50" legend-inset-y="50" legend-inset-step="5"/>
-&lt;/c3chart>
+&lt;/c3jschart>
 </pre>
 
 <pre class="brush: js; html-script: false">
@@ -179,11 +179,11 @@ function clickLegend(data) {
 
             </div>
             <div flex="50">
-                <c3chart bindto-id="interactivelegend" chart-data="vm.piePointsLabel"
+                <c3jschart bindto-id="interactivelegend" chart-data="vm.piePointsLabel"
                          chart-columns="vm.pieColumnsLabel">
                     <chart-legend on-click="vm.clickLegend(data)" legend-inset="top-right"
                         legend-inset-x="50" legend-inset-y="50" legend-inset-step="5"/>
-                </c3chart>
+                </c3jschart>
             </div>
         </div>
     </md-content>

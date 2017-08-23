@@ -6,7 +6,7 @@
             percentage sign with the dollar sign.</p>
 
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="donut-plot1-chart">
+&lt;c3jschart bindto-id="donut-plot1-chart">
     &lt;chart-column column-id="Data 1"
                   column-values="70"
                   column-type="donut"/>
@@ -18,7 +18,7 @@
                   column-type="donut"/>
     &lt;chart-donut title="Donut" width="60" show-label="true" label-format-function="formatDonut"
                  threshold-label="0.1"/>
-&lt;/c3chart>
+&lt;/c3jschart>
 </pre>
 <pre class="brush: js; html-script: false">
 function DonutCtrl() {
@@ -30,7 +30,7 @@ function DonutCtrl() {
     }
 }
 </pre>
-        <c3chart bindto-id="donut-plot1-chart">
+        <c3jschart bindto-id="donut-plot1-chart">
             <chart-column column-id="Data 1"
                           column-values="70"
                           column-type="donut"/>
@@ -42,39 +42,39 @@ function DonutCtrl() {
                           column-type="donut"/>
             <chart-donut title="Donut" width="60" show-label="true" label-format-function="vm.formatDonut"
                          threshold-label="0.1"/>
-        </c3chart>
+        </c3jschart>
 
         <p>In the next sample we use data coming from angularjs objects. Also we remove the sorting which is from large
             to small by default. And in the <code>chart-donut</code> directive we also configure the width of the donut
             and whether to show the label or not. In our case we don't show it.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="eventchart" chart-data="vm.donutPoints" chart-columns="vm.donutColumns" sort-data="null">
+&lt;c3jschart bindto-id="eventchart" chart-data="vm.donutPoints" chart-columns="vm.donutColumns" sort-data="null">
     &lt;chart-legend show-legend="true"/>
     &lt;chart-donut expand="true" width="30" show-label="false" title="Donut Title"/>
-&lt;/c3chart>
+&lt;/c3jschart>
 </pre>
-        <c3chart bindto-id="donut-plot2-chart" chart-data="vm.donutPoints" chart-columns="vm.donutColumns" sort-data="null">
+        <c3jschart bindto-id="donut-plot2-chart" chart-data="vm.donutPoints" chart-columns="vm.donutColumns" sort-data="null">
             <chart-legend show-legend="true"/>
             <chart-donut expand="true" width="30" show-label="false" title="Donut Title"/>
-        </c3chart>
+        </c3jschart>
 
         <p>In the next sample we continue with the previous sample, we now make it possible to configure the selection and on data click present the selected columns.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="eventchart" chart-data="vm.donutPoints" chart-columns="vm.donutColumns" sort-data="null">
+&lt;c3jschart bindto-id="eventchart" chart-data="vm.donutPoints" chart-columns="vm.donutColumns" sort-data="null">
     &lt;chart-legend show-legend="true"/>
     &lt;chart-donut expand="true" width="30" show-label="false" title="Donut Title"/>
     &lt;selection enabled="true"/>
     &lt;chart-events on-click-data="vm.handleClick(data)"/>
-&lt;/c3chart>
+&lt;/c3jschart>
 </pre>
         <div layout="row">
             <div layout="column" flex>
-                <c3chart bindto-id="donut-plot3-chart" chart-data="vm.donutPoints" chart-columns="vm.donutColumns" sort-data="null" callback-function="vm.handleCallback">
+                <c3jschart bindto-id="donut-plot3-chart" chart-data="vm.donutPoints" chart-columns="vm.donutColumns" sort-data="null" callback-function="vm.handleCallback">
                     <chart-legend show-legend="true"/>
                     <chart-donut expand="true" width="30" show-label="false" title="Donut Title"/>
                     <selection enabled="true"/>
                     <chart-events on-click-data="vm.handleClick(data)"/>
-                </c3chart>
+                </c3jschart>
             </div>
             <div layout="column" flex="20">
                 <p>Selected items:</p>

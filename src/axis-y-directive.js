@@ -120,7 +120,7 @@ function ChartAxisY() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,

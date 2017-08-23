@@ -10,7 +10,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Number} width Fixed with of the bars in pixels
  *   
@@ -50,7 +50,7 @@ function ChartBar() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {},
         replace: true,

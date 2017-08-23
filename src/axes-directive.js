@@ -10,7 +10,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} valuesX Specify the key in the data object to use for the x value
  *   
@@ -68,7 +68,7 @@ function ChartAxes() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,

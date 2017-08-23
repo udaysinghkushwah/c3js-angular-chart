@@ -10,7 +10,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} region-id The id used to uniquely identify the column
  *
@@ -58,7 +58,7 @@ function ChartRegion() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {},
         replace: true,

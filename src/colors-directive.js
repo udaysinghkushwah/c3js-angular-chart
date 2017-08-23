@@ -11,7 +11,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} color-pattern A string containing comma separated hex colors
  * @param {String} thresholds A string containing comma separated numeric values
@@ -48,7 +48,7 @@ function ChartColors() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "colorFunction": "&"

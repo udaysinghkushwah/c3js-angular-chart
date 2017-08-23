@@ -7,14 +7,14 @@
             taken care of using the attributes: <em>chart-data</em>, <em>chart-columns</em> and <em>chart-x</em>.</p>
         <div layout="row">
             <div flex="70">
-            <c3chart bindto-id="chart-timeseries" chart-data="vm.datapoints" chart-columns="vm.datacolumns"
+            <c3jschart bindto-id="chart-timeseries" chart-data="vm.datapoints" chart-columns="vm.datacolumns"
                      chart-x="vm.datax">
                 <chart-axis>
                     <chart-axis-x axis-id="x" axis-type="timeseries" axis-x-format="%Y-%m-%d %H:%M:%S">
                         <chart-axis-x-tick tick-format-time="%H:%m:%s"/>
                     </chart-axis-x>
                 </chart-axis>
-            </c3chart>
+            </c3jschart>
             </div>
             <div flex="30">
                 <md-button class="md-raised" ng-click="vm.generateData()">Generate data</md-button>

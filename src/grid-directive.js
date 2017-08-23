@@ -11,7 +11,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showX Whether to show the x axis grid.
  *   
@@ -63,7 +63,7 @@ function ChartGrid() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,

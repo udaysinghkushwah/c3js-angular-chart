@@ -3,7 +3,7 @@
         <p>The next chart shows how to create a basic line chart, there is one additional configuration using the <code>chart-points</code> directive.
         You can set the size of the points using this diective.</p>
 <pre class="brush: xml; html-script: false">
-    &lt;c3chart bindto-id="chart1" show-labels="true">
+    &lt;c3jschart bindto-id="chart1" show-labels="true">
         &lt;chart-column column-id="line1"
                       column-name="Line 1"
                       column-color="green"
@@ -13,9 +13,9 @@
                       show-point="true"
                       point-expand-enabled="true"
                       point-expand-radius="10"/>
-    &lt;/c3chart>
+    &lt;/c3jschart>
 </pre>
-        <c3chart bindto-id="chart1" show-labels="true">
+        <c3jschart bindto-id="chart1" show-labels="true">
             <chart-column column-id="line1"
                           column-name="Line 1"
                           column-color="green"
@@ -25,14 +25,14 @@
                           show-point="true"
                           point-expand-enabled="true"
                           point-expand-radius="10"/>
-        </c3chart>
+        </c3jschart>
         <p>Now there are a lot of options available to you to configure. We can add a second line of data, but we can also
             configure vertical axes. That is what we will do in the next example. We add a second <strong>chart-column</strong>
             element. This line1 and bar1 axis have a different scale, that is what we configure in the <em>chart-axes</em>
             element. The attributes <em>y</em> and <em>y2</em> which columns use which y axis. If you have more than two
             chart-columns you can comma separate them to attach them to the two different vertical axes.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="chart2">
+&lt;c3jschart bindto-id="chart2">
     &lt;chart-column column-id="line1"
                   column-name="Line 1"
                   column-color="red"
@@ -44,9 +44,9 @@
                   column-values="50,20,10,40,15,25"
                   column-type="bar"/>
     &lt;chart-axes y="line1" y2="bar1"/>
-&lt;/c3chart>
+&lt;/c3jschart>
 </pre>
-            <c3chart bindto-id="chart2">
+            <c3jschart bindto-id="chart2">
                 <chart-column column-id="line1"
                               column-name="Line 1"
                               column-color="red"
@@ -59,14 +59,14 @@
                               column-type="bar"/>
                 <chart-axes y="line1" y2="bar1"/>
                 <chart-tooltip show-tooltip="true" title-format-function="vm.formatTitleFunction"/>
-            </c3chart>
+            </c3jschart>
 
             <p>In the next sample we are going to do something else that is cool, we are going to rotate the graph using the directive
             <code>chart-axis</code>.</p>
 <pre class="brush: xml; html-script: false">
 &lt;chart-axis axis-rotate="true"/>
 </pre>
-            <c3chart bindto-id="chart3">
+            <c3jschart bindto-id="chart3">
                 <chart-column column-id="line1"
                               column-name="Line 1"
                               column-color="red"
@@ -79,11 +79,11 @@
                               column-type="bar"/>
                 <chart-axes y="line1" y2="bar1"/>
                 <chart-axis axis-rotate="true"/>
-            </c3chart>
+            </c3jschart>
         <p>In the next bar chart we are demonstrating what you can do with formatting ticks. We add multiple
             configurations for the x-tick as well as the y-tick.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="chartTickSample">
+&lt;c3jschart bindto-id="chartTickSample">
     &lt;chart-column column-id="line1"
                   column-name="Line 1"
                   column-color="red"
@@ -103,9 +103,9 @@
             &lt;chart-axis-y-tick tick-values="50,100,150,200,250"/>
         &lt;/chart-axis-y>
     &lt;/chart-axis>
-&lt;/c3chart>
+&lt;/c3jschart>
 </pre>
-        <c3chart bindto-id="chartTickSample">
+        <c3jschart bindto-id="chartTickSample">
             <chart-column column-id="line1"
                           column-name="Line 1"
                           column-color="red"
@@ -128,12 +128,12 @@
             <chart-grid show-x="false" show-y="true">
                 <chart-grid-optional axis-id="y" grid-value="250" grid-text="Important"/>
             </chart-grid>
-        </c3chart>
+        </c3jschart>
 
         <p>In the next bar chart we are demonstrating what you can do with regions. We add multiple
             regions for each line.</p>
 <pre class="brush: xml; html-script: false">
-&lt;c3chart bindto-id="chartRegionSample">
+&lt;c3jschart bindto-id="chartRegionSample">
     &lt;chart-column column-id="line1"
                   column-name="Line 1"
                   column-color="green"
@@ -163,9 +163,9 @@
                   region-starts="2011"
                   region-ends="2013">&lt;/chart-region>
     &lt;chart-axes values-xs="x1:line1,x2:line2">&lt;/chart-axes>
-&lt;/c3chart>
+&lt;/c3jschart>
 </pre>
-        <c3chart bindto-id="chartRegionSample">
+        <c3jschart bindto-id="chartRegionSample">
             <chart-column column-id="line1"
                           column-name="Line 1"
                           column-color="green"
@@ -195,6 +195,6 @@
                           region-starts="2011,2014"
                           region-ends="2013"></chart-region>
             <chart-axes values-xs="x1:line1,x2:line2"></chart-axes>
-        </c3chart>
+        </c3jschart>
     </md-content>
 </div>

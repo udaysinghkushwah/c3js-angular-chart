@@ -12,7 +12,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showTooltip Whether to show the tooltip or not.
  *   
@@ -132,7 +132,7 @@ function ChartTooltip() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "valueFormatFunction": "&",

@@ -11,7 +11,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Function} on-init The on init callback function.
  *   
@@ -56,7 +56,7 @@ angular.module('c3js.angular.chart')
  * Example:
  * 
  * 
- *   <c3chart bindto-id="donut-plot1-chart">
+ *   <c3jschart bindto-id="donut-plot1-chart">
  *     <chart-column column-id="Data 1"
  *                   column-values="70"
  *                   column-type="donut"/>
@@ -68,7 +68,7 @@ angular.module('c3js.angular.chart')
  *                   column-type="donut"/>
  *     <chart-donut title="Donut" width="60"/>
  *     <chart-events on-click-data="showClick(data)"/>
- *   </c3chart>
+ *   </c3jschart>
  *
  *   graphApp.controller('GraphCtrl', function ($scope) {
  *     $scope.clicked = {};
@@ -108,7 +108,7 @@ function ChartEvents() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "onInit": "&",

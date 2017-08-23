@@ -11,7 +11,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Number} chartWidth Width of the chart element, by default it will be 
  * calculated from the parent container.
@@ -50,7 +50,7 @@ function ChartSize() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,

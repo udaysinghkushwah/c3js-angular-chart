@@ -10,7 +10,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} show-label Show labels in the Donut.
  *
@@ -43,7 +43,7 @@ angular.module('c3js.angular.chart')
  * Example:
  *  
  * 
- * <c3chart bindto-id="donut-plot1-chart">
+ * <c3jschart bindto-id="donut-plot1-chart">
  *   <chart-column column-id="Data 1"
  *                 column-values="70"
  *                 column-type="donut"/>
@@ -54,7 +54,7 @@ angular.module('c3js.angular.chart')
  *                 column-values="60"
  *                 column-type="donut"/>
  *   <chart-donut title="Donut" width="60"/>
- * </c3chart>
+ * </c3jschart>
  */
 function ChartDonut() {
     var donutLinker = function(scope, element, attrs, chartCtrl) {
@@ -84,7 +84,7 @@ function ChartDonut() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {
             "labelFormatFunction": "&"

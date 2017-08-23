@@ -10,7 +10,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} stepType Step types for step chart: step, step-before and step-after.
  *
@@ -42,7 +42,7 @@ function ChartLine() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {},
         replace: true,

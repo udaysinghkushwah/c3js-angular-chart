@@ -13,7 +13,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} valuesX Specify the key in the data object to use for the x value
  *   
@@ -71,7 +71,7 @@ function ChartAxes() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,
@@ -91,7 +91,7 @@ angular.module('c3js.angular.chart')
  *   Element
  * 
  * Parent element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} axisRotate Configure to rotate the axis, javascript true means we rotate the axis.
  *   
@@ -113,7 +113,7 @@ function ChartAxis() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "transclude": true,
@@ -236,7 +236,7 @@ function ChartAxisX() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "transclude": true,
@@ -416,7 +416,7 @@ function ChartAxisXTick() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "tickFormatFunction": "&"
@@ -547,7 +547,7 @@ function ChartAxisY() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,
@@ -639,7 +639,7 @@ function ChartAxisYTick() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "tickFormatFunction": "&"
@@ -660,7 +660,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Number} width Fixed with of the bars in pixels
  *   
@@ -700,7 +700,7 @@ function ChartBar() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {},
         replace: true,
@@ -708,15 +708,15 @@ function ChartBar() {
     };
 }
 angular.module('c3js.angular.chart')
-    .directive('c3chart', ['$timeout', function(timeout) {
-        return C3Chart(timeout);
+    .directive('c3jschart', ['$timeout', function(timeout) {
+        return C3JSChart(timeout);
     }]);
 
 /**
  * @ngdoc directive
- * @name C3Chart
+ * @name C3JSChart
  * @description
- *   `c3chart` is the main directive to create the chart. Use it to set the padding properties and include the other directives. You can also register the callback in this directive that receives the initialised chart object.
+ *   `c3jschart` is the main directive to create the chart. Use it to set the padding properties and include the other directives. You can also register the callback in this directive that receives the initialised chart object.
  *
  *   When using multiple charts in the same page you need to provide unique bind-id parameters.
  * 
@@ -793,9 +793,9 @@ angular.module('c3js.angular.chart')
  *
  * @example
  * Usage:
- *   <c3chart >
+ *   <c3jschart >
  *      <!-- sub elements -->
- *   </c3chart>
+ *   </c3jschart>
  * 
  * Example:
  *
@@ -803,7 +803,7 @@ angular.module('c3js.angular.chart')
  * 
  * Shows how to use dynamic data points.
  * 
- * <c3chart bindto-id="dynamicpie" chart-data="piePoints" chart-columns="pieColumns"/>
+ * <c3jschart bindto-id="dynamicpie" chart-data="piePoints" chart-columns="pieColumns"/>
  * 
  *     $scope.piePoints = [{"data1": 70, "data2": 30, "data3": "100"}];
  *     $scope.pieColumns = [{"id": "data1", "type": "pie"}, {"id": "data2", "type": "pie"}, {
@@ -812,7 +812,7 @@ angular.module('c3js.angular.chart')
  *
  * Show how to register a callback function and use it. The screen contains a button to toggle the legend visibility.
  *
- * <c3chart bindto-id="dynamicpie" chart-data="piePoints" chart-columns="pieColumns"
+ * <c3jschart bindto-id="dynamicpie" chart-data="piePoints" chart-columns="pieColumns"
  *        callback-function="handleCallback"/>
  *
  *     $scope.handleCallback = function (chartObj) {
@@ -830,7 +830,7 @@ angular.module('c3js.angular.chart')
  *       $scope.theChart.flush();
  *   };
  */
-function C3Chart($timeout) {
+function C3JSChart($timeout) {
     var chartLinker = function(scope, element, attrs, chartCtrl) {
         var paddingTop = attrs.paddingTop;
         var paddingRight = attrs.paddingRight;
@@ -907,7 +907,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} color-pattern A string containing comma separated hex colors
  * @param {String} thresholds A string containing comma separated numeric values
@@ -944,7 +944,7 @@ function ChartColors() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "colorFunction": "&"
@@ -966,7 +966,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} column-id The id used to uniquely identify the column
  *   
@@ -1006,7 +1006,7 @@ function ChartColumn() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,
@@ -1707,7 +1707,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} show-label Show labels in the Donut.
  *
@@ -1740,7 +1740,7 @@ angular.module('c3js.angular.chart')
  * Example:
  *  
  * 
- * <c3chart bindto-id="donut-plot1-chart">
+ * <c3jschart bindto-id="donut-plot1-chart">
  *   <chart-column column-id="Data 1"
  *                 column-values="70"
  *                 column-type="donut"/>
@@ -1751,7 +1751,7 @@ angular.module('c3js.angular.chart')
  *                 column-values="60"
  *                 column-type="donut"/>
  *   <chart-donut title="Donut" width="60"/>
- * </c3chart>
+ * </c3jschart>
  */
 function ChartDonut() {
     var donutLinker = function(scope, element, attrs, chartCtrl) {
@@ -1781,7 +1781,7 @@ function ChartDonut() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {
             "labelFormatFunction": "&"
@@ -1803,7 +1803,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Function} on-init The on init callback function.
  *   
@@ -1848,7 +1848,7 @@ angular.module('c3js.angular.chart')
  * Example:
  * 
  * 
- *   <c3chart bindto-id="donut-plot1-chart">
+ *   <c3jschart bindto-id="donut-plot1-chart">
  *     <chart-column column-id="Data 1"
  *                   column-values="70"
  *                   column-type="donut"/>
@@ -1860,7 +1860,7 @@ angular.module('c3js.angular.chart')
  *                   column-type="donut"/>
  *     <chart-donut title="Donut" width="60"/>
  *     <chart-events on-click-data="showClick(data)"/>
- *   </c3chart>
+ *   </c3jschart>
  *
  *   graphApp.controller('GraphCtrl', function ($scope) {
  *     $scope.clicked = {};
@@ -1900,7 +1900,7 @@ function ChartEvents() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "onInit": "&",
@@ -1929,7 +1929,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Number} min The minimum value used in the Gauge.
  *   
@@ -1996,7 +1996,7 @@ function ChartGauge() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {
             'labelFormatFunction': "&"
@@ -2018,7 +2018,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showX Whether to show the x axis grid.
  *   
@@ -2070,7 +2070,7 @@ function ChartGrid() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,
@@ -2138,7 +2138,7 @@ function ChartGridOptional() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,
@@ -2160,7 +2160,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} groupValues Comma separated column ids.
  *   
@@ -2174,7 +2174,7 @@ angular.module('c3js.angular.chart')
  * Example:
  *  
  * 
- * <c3chart bindto-id="stacked-bar-plot1-chart">
+ * <c3jschart bindto-id="stacked-bar-plot1-chart">
  *   <chart-column column-id="data 1"
  *             column-name="Data 1"
  *             column-color="red"
@@ -2186,7 +2186,7 @@ angular.module('c3js.angular.chart')
  *             column-values="50,20,10,40,15,25"
  *             column-type="bar"/>
  *   <chart-group group-values="data 1,data 2"/>
- * </c3chart>  
+ * </c3jschart>  
  */
 function ChartGroup() {
     var groupLinker = function(scope, element, attrs, chartCtrl) {
@@ -2195,7 +2195,7 @@ function ChartGroup() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,
@@ -2216,7 +2216,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showLegend Whether to show the legend or not, default is show.
  *
@@ -2328,7 +2328,7 @@ function ChartLegend() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "onMouseover": "&",
@@ -2351,7 +2351,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} stepType Step types for step chart: step, step-before and step-after.
  *
@@ -2383,7 +2383,7 @@ function ChartLine() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {},
         replace: true,
@@ -2403,7 +2403,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showLabel Whether to show a label for each pie part.
  *   
@@ -2428,12 +2428,12 @@ angular.module('c3js.angular.chart')
  * Example:
  *   
  * 
- * <c3chart bindto-id="pie-plot1-chart">
+ * <c3jschart bindto-id="pie-plot1-chart">
  *   <chart-column column-id="Data 1" column-values="70" column-type="pie"/>
  *   <chart-column column-id="Data 2" column-values="35" column-type="pie"/>
  *   <chart-column column-id="Data 3" column-values="60" column-type="pie"/>
  *   <chart-pie expand="true"/>
- * </c3chart>
+ * </c3jschart>
  */
 function ChartPie() {
     var pieLinker = function(scope, element, attrs, chartCtrl) {
@@ -2457,7 +2457,7 @@ function ChartPie() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {
             "labelFormatFunction": "&"
@@ -2480,7 +2480,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showPoint Whether to show points in the chart.
  *   
@@ -2539,7 +2539,7 @@ function ChartPoints() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {},
         replace: true,
@@ -2558,7 +2558,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} region-id The id used to uniquely identify the column
  *
@@ -2606,7 +2606,7 @@ function ChartRegion() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {},
         replace: true,
@@ -2625,7 +2625,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {String} enabled Specify whether the selection should be enabled or not, default is true.
  *
@@ -2664,7 +2664,7 @@ function Selection() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,
@@ -2684,7 +2684,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Number} chartWidth Width of the chart element, by default it will be 
  * calculated from the parent container.
@@ -2723,7 +2723,7 @@ function ChartSize() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {},
         "replace": true,
@@ -2744,7 +2744,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showTooltip Whether to show the tooltip or not.
  *   
@@ -2864,7 +2864,7 @@ function ChartTooltip() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "valueFormatFunction": "&",

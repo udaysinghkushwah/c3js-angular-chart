@@ -12,7 +12,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showLegend Whether to show the legend or not, default is show.
  *
@@ -124,7 +124,7 @@ function ChartLegend() {
     };
 
     return {
-        "require": "^c3chart",
+        "require": "^c3jschart",
         "restrict": "E",
         "scope": {
             "onMouseover": "&",

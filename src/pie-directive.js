@@ -11,7 +11,7 @@ angular.module('c3js.angular.chart')
  *   Element
  *
  * Parent Element:
- *   c3chart
+ *   c3jschart
  *
  * @param {Boolean} showLabel Whether to show a label for each pie part.
  *   
@@ -36,12 +36,12 @@ angular.module('c3js.angular.chart')
  * Example:
  *   
  * 
- * <c3chart bindto-id="pie-plot1-chart">
+ * <c3jschart bindto-id="pie-plot1-chart">
  *   <chart-column column-id="Data 1" column-values="70" column-type="pie"/>
  *   <chart-column column-id="Data 2" column-values="35" column-type="pie"/>
  *   <chart-column column-id="Data 3" column-values="60" column-type="pie"/>
  *   <chart-pie expand="true"/>
- * </c3chart>
+ * </c3jschart>
  */
 function ChartPie() {
     var pieLinker = function(scope, element, attrs, chartCtrl) {
@@ -65,7 +65,7 @@ function ChartPie() {
     };
 
     return {
-        require: '^c3chart',
+        require: '^c3jschart',
         restrict: 'E',
         scope: {
             "labelFormatFunction": "&"

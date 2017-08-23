@@ -1,13 +1,13 @@
 angular.module('c3js.angular.chart')
-    .directive('c3chart', ['$timeout', function(timeout) {
-        return C3Chart(timeout);
+    .directive('c3jschart', ['$timeout', function(timeout) {
+        return C3JSChart(timeout);
     }]);
 
 /**
  * @ngdoc directive
- * @name C3Chart
+ * @name C3JSChart
  * @description
- *   `c3chart` is the main directive to create the chart. Use it to set the padding properties and include the other directives. You can also register the callback in this directive that receives the initialised chart object.
+ *   `c3jschart` is the main directive to create the chart. Use it to set the padding properties and include the other directives. You can also register the callback in this directive that receives the initialised chart object.
  *
  *   When using multiple charts in the same page you need to provide unique bind-id parameters.
  * 
@@ -84,9 +84,9 @@ angular.module('c3js.angular.chart')
  *
  * @example
  * Usage:
- *   <c3chart >
+ *   <c3jschart >
  *      <!-- sub elements -->
- *   </c3chart>
+ *   </c3jschart>
  * 
  * Example:
  *
@@ -94,7 +94,7 @@ angular.module('c3js.angular.chart')
  * 
  * Shows how to use dynamic data points.
  * 
- * <c3chart bindto-id="dynamicpie" chart-data="piePoints" chart-columns="pieColumns"/>
+ * <c3jschart bindto-id="dynamicpie" chart-data="piePoints" chart-columns="pieColumns"/>
  * 
  *     $scope.piePoints = [{"data1": 70, "data2": 30, "data3": "100"}];
  *     $scope.pieColumns = [{"id": "data1", "type": "pie"}, {"id": "data2", "type": "pie"}, {
@@ -103,7 +103,7 @@ angular.module('c3js.angular.chart')
  *
  * Show how to register a callback function and use it. The screen contains a button to toggle the legend visibility.
  *
- * <c3chart bindto-id="dynamicpie" chart-data="piePoints" chart-columns="pieColumns"
+ * <c3jschart bindto-id="dynamicpie" chart-data="piePoints" chart-columns="pieColumns"
  *        callback-function="handleCallback"/>
  *
  *     $scope.handleCallback = function (chartObj) {
@@ -121,7 +121,7 @@ angular.module('c3js.angular.chart')
  *       $scope.theChart.flush();
  *   };
  */
-function C3Chart($timeout) {
+function C3JSChart($timeout) {
     var chartLinker = function(scope, element, attrs, chartCtrl) {
         var paddingTop = attrs.paddingTop;
         var paddingRight = attrs.paddingRight;
