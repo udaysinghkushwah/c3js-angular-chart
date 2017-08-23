@@ -36,10 +36,5 @@ bower install
 Now grunt is available, you can use some of the utilities that grunt has in store for you. A nice one is to use the watch task and change one of the samples. There is also a plugin in place for running a development server. Just type _grunt devserver_ and connect to port 8888 on your localhost.
 
 
-## Using it in your own project
-The easiest way to use the directives is to use bower to install it to your project.
-```
-bower install c3-angular --save
-```
-In the end you just need one file in your project: c3-angular.min.js
+
 
