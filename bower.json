@@ -1,0 +1,30 @@
+{
+    "name": "c3-angular",
+    "version": "1.3.0",
+    "homepage": "",
+    "authors": [
+        "Udaysingh kushwah <toudaysinghkushwah@gmail.com>"
+    ],
+    "description": "An angularjs directive to integrate c3.js within your angularjs project.",
+    "main": "c3-angular.min.js",
+    "moduleType": [
+        "yui"
+    ],
+    "keywords": [
+        "c3.js",
+        "angularjs",
+        "graph"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.5",
+        "c3": "~0.4.11"
+    }
+}
