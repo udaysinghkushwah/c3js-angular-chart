@@ -1,13 +1,13 @@
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.dynamic', [
+    angular.module('c3js.dynamic', [
         'ui.router'
     ]);
 })();
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.dynamic')
+    angular.module('c3js.dynamic')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider'];
@@ -24,7 +24,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.dynamic')
+    angular.module('c3js.dynamic')
         .controller('DynamicCtrl', DynamicCtrl);
 
     DynamicCtrl.$inject = ['$interval','dateFilter'];

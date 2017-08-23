@@ -1,13 +1,13 @@
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.gauge', [
+    angular.module('c3js.gauge', [
         'ui.router'
     ]);
 })();
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.gauge')
+    angular.module('c3js.gauge')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider'];
@@ -24,7 +24,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.gauge')
+    angular.module('c3js.gauge')
         .controller('GaugeCtrl', GaugeCtrl);
 
     GaugeCtrl.$inject = ['$interval'];

@@ -1,13 +1,13 @@
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.donut', [
+    angular.module('c3js.donut', [
         'ui.router'
     ]);
 })();
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.donut')
+    angular.module('c3js.donut')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider'];
@@ -24,7 +24,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.donut')
+    angular.module('c3js.donut')
         .controller('DonutCtrl', DonutCtrl);
 
     DonutCtrl.$inject = [];

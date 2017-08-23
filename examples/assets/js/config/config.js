@@ -1,13 +1,13 @@
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.config', [
+    angular.module('c3js.config', [
         'ui.router'
     ]);
 })();
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.config')
+    angular.module('c3js.config')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider'];
@@ -24,7 +24,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.config')
+    angular.module('c3js.config')
         .controller('ConfigCtrl', ConfigCtrl);
 
     ConfigCtrl.$inject = [];

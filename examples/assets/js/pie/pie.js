@@ -1,13 +1,13 @@
 (function () {
     'use strict';
-    angular.module('gridshore.c3js.pie', [
+    angular.module('c3js.pie', [
         'ui.router'
     ]);
 })();
 
 (function () {
     'use strict';
-    angular.module('gridshore.c3js.pie')
+    angular.module('c3js.pie')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider'];
@@ -24,7 +24,7 @@
 
 (function () {
     'use strict';
-    angular.module('gridshore.c3js.pie')
+    angular.module('c3js.pie')
         .controller('PieCtrl', PieCtrl);
 
     PieCtrl.$inject = [];

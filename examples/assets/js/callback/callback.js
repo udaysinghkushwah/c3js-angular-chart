@@ -1,13 +1,13 @@
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.callback', [
+    angular.module('c3js.callback', [
         'ui.router'
     ]);
 })();
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.callback')
+    angular.module('c3js.callback')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider'];
@@ -24,7 +24,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.callback')
+    angular.module('c3js.callback')
         .controller('CallbackCtrl', CallbackCtrl);
 
     CallbackCtrl.$inject = [];

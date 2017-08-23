@@ -6,15 +6,15 @@
         //'graphApp.services',
         'ngMaterial',
         'ui.router',
-        'gridshore.c3js.dashboard',
-        'gridshore.c3js.bar',
-        'gridshore.c3js.line',
-        'gridshore.c3js.pie',
-        'gridshore.c3js.callback',
-        'gridshore.c3js.donut',
-        'gridshore.c3js.config',
-        'gridshore.c3js.gauge',
-        'gridshore.c3js.dynamic'
+        'c3js.dashboard',
+        'c3js.bar',
+        'c3js.line',
+        'c3js.pie',
+        'c3js.callback',
+        'c3js.donut',
+        'c3js.config',
+        'c3js.gauge',
+        'c3js.dynamic'
     ]);
 })();
 

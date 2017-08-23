@@ -1,7 +1,7 @@
 // bar-module
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.bar', [
+    angular.module('c3js.bar', [
         //'graphApp.services',
         'ui.router'
     ]);
@@ -9,7 +9,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.bar')
+    angular.module('c3js.bar')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider'];
@@ -26,7 +26,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.bar')
+    angular.module('c3js.bar')
         .controller('BarCtrl', BarCtrl);
 
     BarCtrl.$inject = [];

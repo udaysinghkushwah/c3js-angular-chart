@@ -1,13 +1,13 @@
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.dashboard', [
+    angular.module('c3js.dashboard', [
         'ui.router'
     ]);
 })();
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.dashboard')
+    angular.module('c3js.dashboard')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider'];
@@ -24,7 +24,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.dashboard')
+    angular.module('c3js.dashboard')
         .controller('LeftCtrl', LeftCtrl);
 
     LeftCtrl.$inject = ['$scope','$timeout','$mdSidenav','$log'];
@@ -40,7 +40,7 @@
 
 (function(){
     'use strict';
-    angular.module('gridshore.c3js.dashboard')
+    angular.module('c3js.dashboard')
         .controller('DashboardCtrl', DashboardCtrl);
 
     DashboardCtrl.$inject = [];
