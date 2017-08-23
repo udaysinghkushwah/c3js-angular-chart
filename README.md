@@ -1,16 +1,6 @@
-# C3JS AngularJS directives
-
-```html
-<c3chart bindto-id="chart1">
-	<chart-column column-id="data-1" 
-				  column-values="30,200,100,400,150,250"
-				  column-type="line"/>		
-</c3chart>
-
-```
 
 ## Documentation
-The project contains a number of examples that can be started using grunt:
+C3JS-Angular-Chart contains a number of examples that can be started using grunt:
 
 ```
 grunt devserver

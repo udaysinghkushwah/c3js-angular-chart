@@ -1,7 +1,7 @@
-/*! c3-angular - v1.3.0 - 2017-08-23
+/*! c3js-angular-chart - v1.3.0 - 2017-08-24
 * Copyright (c) 2017 ; Licensed  */
-angular.module('gridshore.c3js.chart', []);
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart', []);
+angular.module('c3js.angular.chart')
     .directive('chartAxes', ChartAxes);
 /**
  * @ngdoc directive
@@ -78,7 +78,7 @@ function ChartAxes() {
         "link": axesLinker
     };
 };
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartAxis', ChartAxis);
 
 /**
@@ -122,7 +122,7 @@ function ChartAxis() {
         "link": axisLinker
     };
 };
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartAxisX', ChartAxisX);
 
 /**
@@ -245,7 +245,7 @@ function ChartAxisX() {
         "link": axisLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartAxisXTick', ChartAxisXTick);
 
 /**
@@ -425,7 +425,7 @@ function ChartAxisXTick() {
         "link": tickLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartAxisY', ChartAxisY);
 
 /**
@@ -554,7 +554,7 @@ function ChartAxisY() {
         "link": axisLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartAxisYTick', ChartAxisYTick);
 
 /**
@@ -648,7 +648,7 @@ function ChartAxisYTick() {
         "link": tickLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartBar', ChartBar);
 /**
  * @ngdoc directive
@@ -707,7 +707,7 @@ function ChartBar() {
         link: barLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('c3chart', ['$timeout', function(timeout) {
         return C3Chart(timeout);
     }]);
@@ -894,7 +894,7 @@ function C3Chart($timeout) {
         "link": chartLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartColors', ChartColors);
 
 /**
@@ -953,7 +953,7 @@ function ChartColors() {
         "link": colorsLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartColumn', ChartColumn);
 
 /**
@@ -1013,7 +1013,7 @@ function ChartColumn() {
         "link": columnLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     /**
      * @controller
      */
@@ -1695,7 +1695,7 @@ function ChartController($scope, $timeout) {
         }
     }
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartDonut', ChartDonut);
 /**
  * @ngdoc directive
@@ -1790,7 +1790,7 @@ function ChartDonut() {
         link: donutLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartEvents', ChartEvents);
 
 /**
@@ -1917,7 +1917,7 @@ function ChartEvents() {
         "link": eventsLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartGauge', ChartGauge);
 /**
  * @ngdoc directive
@@ -2005,7 +2005,7 @@ function ChartGauge() {
         link: gaugeLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartGrid', ChartGrid);
 
 /**
@@ -2079,7 +2079,7 @@ function ChartGrid() {
         "template": "<div ng-transclude></div>"
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartGridOptional', ChartGridOptional);
 /**
  * @ngdoc directive
@@ -2145,7 +2145,7 @@ function ChartGridOptional() {
         "link": gridLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartGroup', ChartGroup);
 
 /**
@@ -2202,7 +2202,7 @@ function ChartGroup() {
         "link": groupLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartLegend', ChartLegend);
 
 /**
@@ -2339,7 +2339,7 @@ function ChartLegend() {
         "link": legendLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartLine', ChartLine);
 /**
  * @ngdoc directive
@@ -2390,7 +2390,7 @@ function ChartLine() {
         link: lineLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartPie', ChartPie);
 
 /**
@@ -2466,7 +2466,7 @@ function ChartPie() {
         link: pieLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartPoints', ChartPoints);
 
 /**
@@ -2546,7 +2546,7 @@ function ChartPoints() {
         link: pointLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartRegion', ChartRegion);
 /**
  * @ngdoc directive
@@ -2613,7 +2613,7 @@ function ChartRegion() {
         link: regionLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('selection', Selection);
 /**
  * @ngdoc directive
@@ -2671,7 +2671,7 @@ function Selection() {
         "link": selectionLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartSize', ChartSize);
 
 /**
@@ -2730,7 +2730,7 @@ function ChartSize() {
         "link": sizeLinker
     };
 }
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartTooltip', ChartTooltip);
 
 /**

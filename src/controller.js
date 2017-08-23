@@ -2,7 +2,7 @@
  * @name ChartController
  * @description Controller for the c3js directive
  */
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     /**
      * @controller
      */

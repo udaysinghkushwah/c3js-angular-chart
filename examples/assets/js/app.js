@@ -2,7 +2,7 @@
 (function(){
     'use strict';
     angular.module('graphApp', [
-        'gridshore.c3js.chart',
+        'c3js.angular.chart',
         //'graphApp.services',
         'ngMaterial',
         'ui.router',

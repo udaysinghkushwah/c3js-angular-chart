@@ -1,4 +1,4 @@
-angular.module('gridshore.c3js.chart')
+angular.module('c3js.angular.chart')
     .directive('chartTooltip', ChartTooltip);
 
 /**
